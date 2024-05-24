@@ -1,0 +1,32 @@
+.Inputs {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-areas:
+    "Email Subject"
+    "Message Message"
+    "Message Message"
+    "Message Message";
+}
+
+.Email {
+  grid-area: Email;
+}
+.Subject {
+  grid-area: Subject;
+}
+.Message {
+  grid-area: Message;
+}
+input,
+textarea {
+  @apply relative z-50 focus:outline-none;
+}
+@media (max-width: 768px) {
+  .Inputs {
+    grid-template-areas:
+      "Email"
+      "Subject"
+      "Message"
+      "Message";
+  }
+}
